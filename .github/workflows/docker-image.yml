@@ -21,4 +21,4 @@ jobs:
       run: ls -l && pwd 
     - name: Build the Docker image
       run: |
-        docker build . --file DVReflectors/YSFReflector/Dockerfile --tag shaposhnikoff/YSFReflector:$(date +%s)
+        docker build . --file DVReflectors/YSFReflector/Dockerfile --tag shaposhnikoff/ysfreflector:$(date +%s)
