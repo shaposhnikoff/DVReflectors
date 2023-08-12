@@ -23,5 +23,5 @@ jobs:
  
     - name: Build the Docker image
       run: |
-        cd $GITHUB_WORKSPACE/YSFReflector && 
+        cd $GITHUB_WORKSPACE/YSFReflector/docker && 
         docker build . --tag shaposhnikoff/ysfreflector:$(date +%s)
