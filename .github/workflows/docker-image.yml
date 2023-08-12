@@ -20,7 +20,7 @@ jobs:
     - name: check the code
       run: |
         ls -l && pwd 
-        ls -la /home/runner/work/DVReflectors/DVReflectors
+        ls -la /home/runner/work/DVReflectors/DVReflectors/main
     - name: Build the Docker image
       run: |
         docker build . --file DVReflectors/YSFReflector/Dockerfile --tag shaposhnikoff/ysfreflector:$(date +%s)
