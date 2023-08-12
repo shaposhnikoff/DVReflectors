@@ -19,7 +19,8 @@ jobs:
     - name: check the code
       run: |
         ls -l && pwd 
+        echo $GITHUB_WORKSPACE
         ls -la /home/runner/work/DVReflectors/DVReflectors
     - name: Build the Docker image
       run: |
-        docker build . --file DVReflectors/YSFReflector/Dockerfile --tag shaposhnikoff/ysfreflector:$(date +%s)
+        docker build . --file DVReflectors/DVReflectors/YSFReflector/Dockerfile --tag shaposhnikoff/ysfreflector:$(date +%s)
