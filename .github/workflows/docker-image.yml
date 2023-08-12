@@ -13,7 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        path: main
+    - name: check the code
+      run: ls -l && pwd 
     - name: Build the Docker image
       run: |
         docker build . --file YSFReflector/Dockerfile --tag shaposhnikoff/YSFReflector:$(date +%s)
