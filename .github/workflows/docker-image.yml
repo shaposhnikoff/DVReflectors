@@ -15,12 +15,11 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-      with:
-        path: main
+
     - name: check the code
       run: |
         ls -l && pwd 
-        ls -la /home/runner/work/DVReflectors/DVReflectors/main
+        ls -la /home/runner/work/DVReflectors/DVReflectors
     - name: Build the Docker image
       run: |
         docker build . --file DVReflectors/YSFReflector/Dockerfile --tag shaposhnikoff/ysfreflector:$(date +%s)
